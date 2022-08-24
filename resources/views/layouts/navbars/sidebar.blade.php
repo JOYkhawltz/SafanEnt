@@ -7,7 +7,8 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li>
+            <!-- Commented -->
+            <!-- <li>
                 <a data-toggle="collapse" href="#transactions" {{ $section == 'transactions' ? 'aria-expanded=true' : '' }}>
                     <i class="tim-icons icon-bank" ></i>
                     <span class="nav-link-text">Transactions</span>
@@ -60,7 +61,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
             <li>
                 <a data-toggle="collapse" href="#inventory" {{ $section == 'inventory' ? 'aria-expanded=true' : '' }}>
@@ -99,26 +100,75 @@
                 </div>
             </li>
 
+            <li>
+                <a data-toggle="collapse" href="#sectors" {{ $section == 'sectors' ? 'aria-expanded=true' : '' }}>
+                    <i class="tim-icons icon-bank"></i>
+                    <span class="nav-link-text">Management</span>
+                    <b class="caret mt-1"></b>
+                </a>
+
+                <div class="collapse {{ $section == 'sectors' ? 'show' : '' }}" id="sectors">
+                    <ul class="nav pl-4">
+                        <li @if ($pageSlug == 'sectors') class="active " @endif>
+                            <a href="{{ route('sectors.index') }}">
+                                <i class="tim-icons icon-chart-pie-36"></i>
+                                <p>Sectors</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'companies') class="active " @endif>
+                            <a href="{{ route('companies.index') }}">
+                                <i class="tim-icons icon-notes"></i>
+                                <p>Companies</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'units') class="active " @endif>
+                            <a href="{{ route('units.index') }}">
+                                <i class="tim-icons icon-tag"></i>
+                                <p>Units</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'mills') class="active " @endif>
+                            <a href="{{ route('mills.index') }}">
+                                <i class="tim-icons icon-paper"></i>
+                                <p>Mills</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'departments') class="active " @endif>
+                            <a href="{{ route('departments.index') }}">
+                                <i class="tim-icons icon-chart-pie-36"></i>
+                                <p>Departments</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'machines') class="active " @endif>
+                            <a href="{{ route('machines.index') }}">
+                                <i class="tim-icons icon-notes"></i>
+                                <p>Machines</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <li @if ($pageSlug == 'clients') class="active " @endif>
                 <a href="{{ route('clients.index') }}">
                     <i class="tim-icons icon-single-02"></i>
                     <p>Clients</p>
                 </a>
             </li>
-
-            <li @if ($pageSlug == 'providers') class="active " @endif>
+<!-- Commented -->
+            <!-- <li @if ($pageSlug == 'providers') class="active " @endif>
                 <a href="{{ route('providers.index') }}">
                     <i class="tim-icons icon-delivery-fast"></i>
                     <p>Providers</p>
                 </a>
-            </li>
+            </li> -->
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <!-- <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('methods.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
                     <p>Methods and Accounts</p>
                 </a>
-            </li>
+            </li> -->
 
 
             <!-- <li>

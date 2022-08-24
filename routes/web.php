@@ -28,8 +28,18 @@ Route::group(['middleware' => 'auth'], function () {
         'inventory/categories' => 'ProductCategoryController',
         'transactions/transfer' => 'TransferController',
         'methods' => 'MethodController',
+
+        'sectors' => 'SectorController',
+        'companies' => 'CompanyController',
+        'units' => 'UnitController',
+        'mills' => 'MillController',
+        'departments' => 'DepartmentController',
+        'machines' => 'MachineController'
+
     ]);
-    
+
+    // Route::get('sectors', ['as' => 'sectors.index', 'uses' => 'SectorController@index']);
+
     Route::resource('transactions', 'TransactionController')->except(['create', 'show']);
     Route::get('transactions/stats/{year?}/{month?}/{day?}', ['as' => 'transactions.stats', 'uses' => 'TransactionController@stats']);
     Route::get('transactions/{type}', ['as' => 'transactions.type', 'uses' => 'TransactionController@type']);
